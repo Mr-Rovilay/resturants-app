@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.ts",
+    "start": "node index.ts",
+    "build": "npm install && npm run dev",
+    "clean": "rm -rf build && mkdir build",
+    "stripe": "stripe listen --forward-to localhost:5000/order/webhook"
   },
   "keywords": [],
   "author": "",
